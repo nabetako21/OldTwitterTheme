@@ -36,17 +36,19 @@ input[type="checkbox"] {
 #navbar-tweet-button, #navbar-tweet-button-text {
   color: var(--active-message);
 }
-.modal, #timeline-type-center, #new-tweet-container, #timeline, #tweet-nav, #profile-info-text, .about, .box:not(.tweet-card-link), .user-preview, #profile-avatar, #user-avatar {
+.modal, #timeline-type-center, #new-tweet-container, #timeline, #tweet-nav, #profile-info-text, .box:not(.tweet-card-link), .user-preview, #profile-avatar, #user-avatar {
   backdrop-filter: blur(5px);
+}
+.cell {
+  text-shadow: 0 0 .1em var(--new-tweet-over);
 }
 #tweet-nav {
   background-color: var(--darker-background-color);
 }
-#profile-info-text, .about {
-  background-color: var(--background-color);
-}
 #profile-info-text {
-  padding: 15px;
+  background-color: var(--background-color);
+  padding: 10px;
+  margin: 10px 0 0 0;
   border-radius: 5px;
   border: 1px solid var(--border);
 }
