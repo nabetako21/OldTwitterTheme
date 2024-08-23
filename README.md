@@ -1,5 +1,5 @@
-# OldTwitter_theme
-[OldTwitter](https://github.com/dimdenGD/OldTwitter/)で個人的に使用しているカスタムCSSを公開します。<br>
+# OldTwitterTheme
+[OldTwitter](https://github.com/dimdenGD/OldTwitter/) で個人的に使用しているカスタムCSSを公開します。<br>
 
 ## こんなテーマ
 * ツイートヘッダー周りの変更
@@ -20,8 +20,23 @@
 * 背景を変更できるように
   * タイムラインなどを背景を半透過＆ぼかし
 
+## 使用方法
+* OldTwitterのカスタムCSSに以下を記述
+  ```CSS
+  @import url('https://nabetako21.github.io/OldTwitterTheme/Metro-OldTwitter.css');
+  ```
+
 ## 拡張CSS
-カスタムCSSの欄に追記すると楽しい(?)設定<br>
+カスタムCSSに追記すると楽しい(?)設定<br>
+* フォント変更（Google Fonts使用）
+  ```CSS
+  /* 自分はこれを使用してます */
+  @import url('https://fonts.googleapis.com/css2?family=Murecho:wght@450..900&family=M+PLUS+2:wght@450..900&display=swap');
+  :root {
+    --font: "Murecho","M PLUS 2",sans-serif !important;
+    --tweet-font: "Murecho","M PLUS 2",sans-serif !important;
+  }
+  ```
 * 背景の変更
   ```CSS
   body {
@@ -34,11 +49,11 @@
 * 色の変更
   ```CSS
   /* 背景半透過のために OldTwitter での設定を上書きしていますが、
-   * 上書き仕返せば変更できます */
+   * 上書き仕返せば一応変更できます */
   body {
-    --background-color       : #ffffffaa !important;
-    --dark-background-color  : #f5f8faaa !important;
+    --background-color: #ffffffaa !important;
+    --dark-background-color: #f5f8faaa !important;
     --darker-background-color: #f5f8facc !important;
-    --border                 : #66757f33 !important;
+    --border: #66757f33 !important;
   }
   ```
