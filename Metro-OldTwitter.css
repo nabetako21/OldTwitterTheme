@@ -405,9 +405,19 @@ textarea::placeholder {
   fill: var(--link-color);
 }
 
+.tweet-media {
+  border-radius: 7px;
+  overflow: clip;
+}
+.tweet-media-element-censor {
+  -moz-filter: blur(8px);
+  -webkit-filter: blur(8px);
+  filter: blur(8px);
+  transform: scale(1);
+}
 :not(.tweet-main)>article .tweet-media-cws {
   position: absolute;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(8px);
   width: 100%;
   height: calc(100% - 5px);
   border-radius: 7px;
