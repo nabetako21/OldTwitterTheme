@@ -21,7 +21,6 @@ input[type="checkbox"] {
   accent-color: var(--link-color);
 }
 #twitter-logo-div {
-  backdrop-filter: blur(5px);
   position: fixed;
   top: 0;
   left: 0;
@@ -36,14 +35,22 @@ input[type="checkbox"] {
 #navbar-tweet-button, #navbar-tweet-button-text {
   color: var(--active-message);
 }
-.modal, #timeline-type-center, #new-tweet-container, #timeline, #tweet-nav, #profile-info-text, .box:not(.tweet-card-link), .user-preview, #profile-avatar, #user-avatar {
+#twitter-logo-div, .modal, #timeline-type-center, #new-tweet-container, #timeline, #tweet-nav, .dropdown-menu, #profile-info-text, .box:not(.tweet-card-link), .user-preview, #profile-avatar, #user-avatar {
   backdrop-filter: blur(5px);
 }
 .cell {
   text-shadow: 0 0 .1em var(--new-tweet-over);
 }
-#tweet-nav {
+#tweet-nav, .dropdown-menu {
   background-color: var(--darker-background-color);
+}
+#tweet-nav {
+  position: relative;
+  top: 0;
+  z-index: 1;
+}
+#tweet-nav-more-menu {
+  width: 215px;
 }
 #profile-info-text {
   background-color: var(--background-color);
@@ -60,12 +67,7 @@ input[type="checkbox"] {
   margin-bottom: 0;
   padding-bottom: 4px;
   box-sizing: content-box;
-  background-color: var(--dark-background-color);
-}
-@media screen and (min-width: 591px) {
-  #profile-nav {
-    backdrop-filter: blur(5px);
-  }
+  background-color: var(--menu-bg);
 }
 #nav-profile-info {
   height: 54px;
@@ -77,9 +79,6 @@ input[type="checkbox"] {
 #profile-avatar {
   background-color: #0000;
 }
-#profile-nav-center-cell {
-  top: -31px;
-}
 #pin-lists, #pin-bookmarks, #pin-profile {
   background-color: #0000;
 }
@@ -88,15 +87,10 @@ input[type="checkbox"] {
   width: 35px;
 }
 
-@media screen and (max-width: 880px) {
-  #profile-nav-center-cell {
-    top: 0;
-  }
-  #profile-nav-right-cell {
-    top: 68px;
-  }
-}
 @media screen and (max-width: 590px) {
+  #navbar-user-menu {
+    top: 31px;
+  }
   #navbar-links {
     backdrop-filter: blur(5px);
   }
@@ -120,7 +114,6 @@ input[type="checkbox"] {
   }
   #profile-nav-buttons {
     right: 17px;
-    margin-top: -55px;
   }
   #tweet-to-bg {
     top: 45px;
@@ -244,6 +237,11 @@ textarea::placeholder {
   vertical-align: -.1em !important;
   height: 1em;
   width: 1em;
+}
+
+.tweet-header-follow {
+  position: absolute;
+  right: 20px;
 }
 
 .tweet:not(.tweet-self-thread-continuation) .tweet-header-info {
