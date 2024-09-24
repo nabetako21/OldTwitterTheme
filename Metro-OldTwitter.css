@@ -82,6 +82,9 @@ input[type="checkbox"] {
 #pin-lists, #pin-bookmarks, #pin-profile {
   background-color: #0000;
 }
+.profile-stat {
+  padding-bottom: 5px;
+}
 
 #tweets-loading img {
   width: 35px;
